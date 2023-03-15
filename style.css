@@ -7,6 +7,10 @@
   --color-ice: #cbf9ff;
   --color-ice-border: #55ebff;
   --color-bg: #ffebd3;
+
+  --transition-60: all 0.06s ease-in;
+  --transition-70: all 0.07s ease-in;
+  --transition-80: all 0.08s ease-in;
 }
 
 body {
@@ -34,18 +38,6 @@ body {
   animation: snoring 1s infinite alternate;
 }
 
-.snoring-bubble:hover {
-  cursor: pointer;
-  animation: none;
-  opacity: 0;
-}
-
-.snoring-bubble:hover ~ .bear-face .eye {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-}
-
 @keyframes snoring {
   from {
     width: 0%;
@@ -59,6 +51,12 @@ body {
   }
 }
 
+.snoring-bubble:hover {
+  cursor: pointer;
+  animation: none;
+  opacity: 0;
+}
+
 [class|="bear"] {
   border: 6px solid var(--color-black);
   background-color: var(--color-white);
@@ -70,6 +68,7 @@ body {
   height: 68px;
   border-radius: 50%;
   top: 14px;
+  transition: var(--transition-60);
 }
 
 .bear-ear.left {
@@ -102,6 +101,7 @@ body {
   background-color: var(--color-black);
   border-radius: 6px;
   top: 90px;
+  transition: var(--transition-60);
 }
 
 .eye.left {
@@ -110,6 +110,12 @@ body {
 
 .eye.right {
   right: 78px;
+}
+
+.snoring-bubble:hover ~ .bear-face .eye {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
 }
 
 .snoring-bubble:hover ~ .bear-face .eye.left {
@@ -238,6 +244,7 @@ body {
   height: 98px;
   border-radius: 50px;
   top: 238px;
+  transition: var(--transition-60);
 }
 
 .bear-arm.left {
