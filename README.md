@@ -1,1 +1,1 @@
-# My-CSS-Character
+* CSS로 나만의 애니메이션 캐릭터 그리기
